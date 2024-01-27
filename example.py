@@ -31,28 +31,32 @@ with placeholder.container():
 
 picture = "image/" + st.session_state.rand_item + '.jpg'
 img = Image.open(picture)
-st.image(img, width=300)
-st.session_state.user_input = st.text_input("Type in the English word you see in the IPA symbol", key=1)
-if st.button("Submit"):
+
+with st.form(key="answer_form"):
+    st.image(img, width=300)
+    st.session_state.user_input = st.text_input("Type in the English word you see in the IPA symbol", key=1)
+    submit_button = st.form_submit_button("Submit")
+
+if submit_button:
     if st.session_state.user_input:
         if st.session_state.user_input.lower() == str(st.session_state.rand_item):
             text_to_translate = str(st.session_state.rand_item)
             translator = Translator(to_lang='it')
             result = Translator.translate(translator, text_to_translate)
             placeholder.header("Great job! That is correct!.")
-            st.write("The word '",st.session_state.rand_item,"' translates to '",result,"' in Italian.")
+            st.write("The word '", st.session_state.rand_item, "' translates to '", result, "' in Italian.")
             st.write("Now you can practice the pronunciation of this word")
-            tts=gTTS(text= st.session_state.rand_item, lang='en')
+            tts = gTTS(text=st.session_state.rand_item, lang='en')
             tts.save('user.mp3')
             st.audio('user.mp3')
-        else:      
+        else:
             text_to_translate = str(st.session_state.rand_item)
             translator = Translator(to_lang='it')
             result = Translator.translate(translator, text_to_translate)
             placeholder.header("Unfortunately, that is not correct.")
-            st.write("The correct word was '",st.session_state.rand_item,"'.")
-            st.write("The word '",st.session_state.rand_item,"' translates to '",result,"' in Italian.")
+            st.write("The correct word was '", st.session_state.rand_item, "'.")
+            st.write("The word '", st.session_state.rand_item, "' translates to '", result, "' in Italian.")
             st.write("Now you can practice the pronunciation of this word")
-            tts=gTTS(text= st.session_state.rand_item, lang='en')
+            tts = gTTS(text=st.session_state.rand_item, lang='en')
             tts.save('user.mp3')
             st.audio('user.mp3')
