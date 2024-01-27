@@ -55,7 +55,7 @@ elif st.session_state.page == 1:
       placeholder.header("Great job! That is correct!.")
       st.write("The word '",st.session_state.rand_item,"' translates to '",result,"' in italian.")
       st.write("Now you can practice the pronunciation of this word")
-      tts=gTTS(text= st.session_state.rand_item, lang='en')
+      tts=gTTS(text= st.session_state.rand_item, lang='en', tld='co.uk')
       tts.save('user.mp3')
       st.audio('user.mp3')
 
@@ -70,7 +70,7 @@ elif st.session_state.page == 1:
       st.write("The correct word was '",st.session_state.rand_item,"'.")
       st.write("The word '",st.session_state.rand_item,"' translates to '",result,"' in italian.")
       st.write("Now you can practice the pronunciation of this word")
-      tts=gTTS(text= st.session_state.rand_item, lang='en')
+      tts=gTTS(text= st.session_state.rand_item, lang='en', tld='co.uk')
       tts.save('user.mp3')
       st.audio('user.mp3')
               
