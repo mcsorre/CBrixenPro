@@ -35,16 +35,14 @@ if st.session_state.page == 0:
     st.subheader(':blue[Embark on a linguistic adventure with the _immersive IPA (International Phonetic Alphabet) Quiz_] :red[designed to challenge and enhance your understanding of _English pronunciation_]')
     st.write("\n")
     st.write("\n")
-    st.subheader(':uk: :uk: :uk: :blue[Decipher the] :red[IPA symbol] :uk: :uk: :uk:')
-    st.write("\n")
-    st.write("\n")
-    expander = st.expander("See explanation")
+    expander = st.expander("As a brief recall, click here to check what symbols mean in the IPA ")
     expander.write("""
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
+        This table shows the phonemic chart of english sounds:
     """)
-    expander.image("https://static.streamlit.io/examples/dice.jpg")
+    expander.image("https://www.englishclub.com/images/pronunciation/Phonemic-Chart.jpg")
+    st.write("\n")
+    st.write("\n")
+    st.subheader(':uk: :uk: :uk: :blue[Decipher the] :red[IPA symbol] :uk: :uk: :uk:')
   picture = "image/" + st.session_state.rand_item + '.jpg'
   img = Image.open(picture)
   st.image(img, width=300)
