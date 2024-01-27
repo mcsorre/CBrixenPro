@@ -32,21 +32,24 @@ if st.session_state.page == 0:
     st.header(':red[The English IPA Quiz:] :blue[_Decoding Words_]', divider='rainbow')
     st.write("\n")
     st.write("\n")
-    st.subheader(':blue[Embark on a linguistic adventure with the _immersive IPA (International Phonetic Alphabet) Quiz_] :red[designed to challenge and enhance your understanding of _English pronunciation_]')
+    st.subheader(':blue[Embark on a linguistic adventure with the _immersive IPA (International Phonetic Alphabet) Quiz_] :red[designed to challenge and enhance your understanding of _British English pronunciation_]')
     st.write("\n")
     st.write("\n")
     expander = st.expander("As a brief recall, click here to check what symbols mean in the IPA ")
     expander.write("""
-        This table shows the phonemic chart of english sounds:
+        This table shows the phonemic chart of English sounds:
     """)
     expander.image("https://www.englishclub.com/images/pronunciation/Phonemic-Chart.jpg")
     st.write("\n")
     st.write("\n")
+    st.header(':uk: :uk: :uk: Let's go! :uk: :uk: :uk:', divider='black')
     st.subheader(':uk: :uk: :uk: :blue[Decipher the] :red[IPA symbol] :uk: :uk: :uk:')
+    st.write("\n")
+    st.write("\n")
   picture = "image/" + st.session_state.rand_item + '.jpg'
   img = Image.open(picture)
   st.image(img, width=300)
-  st.session_state.user_input = st.text_input("Type in the English word you see in the IPA symbol", key=1)
+  st.session_state.user_input = st.text_input("Type in the English word you see in the IPA symbol. Remember to first press _Enter_ and then click on _Continue_", key=1)
   st.button("Continue",on_click=nextpage,disabled=(st.session_state.page > 1))
   
 
