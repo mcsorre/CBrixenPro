@@ -31,9 +31,9 @@ if st.session_state.page == 0:
   with placeholder.container():
     st.header(':red[The English IPA Quiz:] :blue[_Decoding Words_]', divider='rainbow')
     st.write("\n")
-    st.caption(':black[Embark on a] :red[linguistic adventure] :black[with the] :blue[_immersive IPA (International Phonetic Alphabet) Quiz_] :black[designed to] :red[challenge and enhance your understanding of] :blue[_English pronunciation_]')
+    st.text(':black[Embark on a] :red[linguistic adventure] :black[with the] :blue[_immersive IPA (International Phonetic Alphabet) Quiz_] :black[designed to] :red[challenge and enhance your understanding of] :blue[_English pronunciation_]')
     st.write("\n")
-    st.subheader(':blue[Decipher the] :red[IPA symbol] :uk: :uk: :uk:')
+    st.subheader(':uk: :uk: :uk::blue[Decipher the] :red[IPA symbol] :uk: :uk: :uk:')
     st.write("\n")
     st.write("\n")
   picture = "image/" + st.session_state.rand_item + '.jpg'
