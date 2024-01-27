@@ -38,13 +38,13 @@ if st.session_state.page == 0:
     st.subheader(':uk: :uk: :uk: :blue[Decipher the] :red[IPA symbol] :uk: :uk: :uk:')
     st.write("\n")
     st.write("\n")
-    with st.expander("See explanation"):
-      st.write(\"\"\"
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
-    \"\"\")
-    st.image("https://www.englishclub.com/images/pronunciation/Phonemic-Chart.jpg")
+    expander = st.expander("See explanation")
+expander.write(\"\"\"
+    The chart above shows some numbers I picked for you.
+    I rolled actual dice for these, so they're *guaranteed* to
+    be random.
+\"\"\")
+expander.image("https://static.streamlit.io/examples/dice.jpg")
   picture = "image/" + st.session_state.rand_item + '.jpg'
   img = Image.open(picture)
   st.image(img, width=300)
