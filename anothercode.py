@@ -42,8 +42,8 @@ if st.session_state.page == 0:
     expander.image("https://www.englishclub.com/images/pronunciation/Phonemic-Chart.jpg")
     st.write("\n")
     st.write("\n")
-    st.header(':uk: :uk: :uk: Let's go! :uk: :uk: :uk:', divider='black')
-    st.subheader(':uk: :uk: :uk: :blue[Decipher the] :red[IPA symbol] :uk: :uk: :uk:')
+    st.header(":uk: :uk: :uk: Let's go! :uk: :uk: :uk:", divider='black')
+    st.subheader(':blue[Decipher the] :red[IPA symbol]')
     st.write("\n")
     st.write("\n")
   picture = "image/" + st.session_state.rand_item + '.jpg'
