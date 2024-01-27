@@ -49,7 +49,7 @@ if st.session_state.page == 0:
   picture = "image/" + st.session_state.rand_item + '.jpg'
   img = Image.open(picture)
   st.image(img, width=300)
-  st.session_state.user_input = st.text_input("Type in the English word you see in the IPA symbol. Remember to first press _Enter_ and then click on _Continue_", key=1)
+  st.session_state.user_input = st.text_input("Type in the English word you see in the IPA symbol. **Remember to first press Enter and then click on Continue**", key=1)
   st.button("Continue",on_click=nextpage,disabled=(st.session_state.page > 1))
   
 
