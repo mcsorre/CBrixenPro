@@ -31,7 +31,7 @@ if st.session_state.page == 0:
   with placeholder.container():
     st.title("The Ultimate IPA Quiz: Decoding English Words")
     st.write("\n")
-    st.markdown(''' :black[Embark on a] :red[linguistic adventure] :black[with the] :orange[*immersive IPA (International Phonetic Alphabet) Quiz,*] :black[designed to] :green[challenge and enhance your understanding of] :black[***English pronunciation***]")
+    st.markdown(''' :black[Embark on a] :red[linguistic adventure] :black[with the] :orange[*immersive IPA (International Phonetic Alphabet) Quiz,*] :black[designed to] :green[challenge and enhance your understanding of] :black[***English pronunciation***]''')
     st.write("\n")
     st.header("Decipher the IPA symbol :uk: :uk: :uk:")
     st.write("\n")
