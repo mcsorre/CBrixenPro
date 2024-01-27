@@ -31,7 +31,9 @@ if st.session_state.page == 0:
   with placeholder.container():
     st.header(':red[The English IPA Quiz:] :blue[_Decoding Words_]', divider='rainbow')
     st.write("\n")
+    st.write("\n")
     st.subheader(':blue[Embark on a linguistic adventure with the _immersive IPA (International Phonetic Alphabet) Quiz_] :red[designed to challenge and enhance your understanding of _English pronunciation_]')
+    st.write("\n")
     st.write("\n")
     st.subheader(':uk: :uk: :uk: :blue[Decipher the] :red[IPA symbol] :uk: :uk: :uk:')
     st.write("\n")
