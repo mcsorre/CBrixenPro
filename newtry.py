@@ -29,7 +29,7 @@ if st.session_state.page == 0:
   else:
     rand_item = st.session_state.item
   with placeholder.container():
-    st.title(':red[The English IPA Quiz:] :blue[_Decoding Words_]', divider='rainbow')
+    st.header(':red[The English IPA Quiz:] :blue[_Decoding Words_]', divider='rainbow')
     st.write("\n")
     st.write("\n")
     st.subheader(':blue[Embark on a linguistic adventure with the _immersive IPA (International Phonetic Alphabet) Quiz_] :red[designed to challenge and enhance your understanding of _English pronunciation_]')
