@@ -20,6 +20,9 @@ items = ['chair', 'cold', 'earth', 'friend', 'heart', 'mountain', 'mouse', 'snow
 if 'rand_item' not in st.session_state:
     st.session_state.rand_item = random.choice(items)
 
+with st.sidebar:
+    st.write("")
+
 with placeholder.container():
     st.title("The Ultimate IPA Quiz: Decoding English Words")
     st.write("\n")
