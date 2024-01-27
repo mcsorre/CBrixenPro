@@ -39,11 +39,11 @@ if st.session_state.page == 0:
     st.write("\n")
     st.write("\n")
     expander = st.expander("See explanation")
-    expander.write(\"\"\"
+    expander.write("""
         The chart above shows some numbers I picked for you.
         I rolled actual dice for these, so they're *guaranteed* to
         be random.
-    \"\"\")
+    """)
     expander.image("https://static.streamlit.io/examples/dice.jpg")
   picture = "image/" + st.session_state.rand_item + '.jpg'
   img = Image.open(picture)
